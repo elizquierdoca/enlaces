@@ -1,0 +1,127 @@
+/* Reset y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+/* Fondo con imagen y overlay */
+.background {
+  background-image: url("");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    to right,
+    rgba(173, 216, 230, 1),
+    rgba(0, 0, 139, 1)
+  ); /* Azul claro a azul oscuro */
+  padding: 1rem 0.5rem;
+  padding-bottom: 2rem; /* espacio extra abajo */
+  min-height: 100vh;
+}
+
+.background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Contenido */
+.content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+  margin: 50px auto 1rem auto;
+}
+
+.btn {
+  max-width: 100%;
+  height: auto;
+  background-color: #25d366;
+  border: none;
+  padding: 1rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  display: block;
+}
+
+.btn.download {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn.mercadolibre {
+  background-color: #ffdb20;
+  color: #000;
+}
+
+.btn.instagram {
+  background-color: #e4405f;
+}
+
+.btn.email {
+  background-color: #0077b5;
+}
+
+.btn:hover {
+  filter: brightness(85%);
+}
+
+.soporte {
+  margin-top: 1rem;
+  background-color: rgba(5, 2, 2, 0.15);
+  padding: 1rem;
+  border-radius: 15px;
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 480px) {
+  .content {
+    max-width: 100%;
+  }
+  .btn {
+    font-size: 1rem;
+    padding: 0.8rem;
+    border-radius: 25px;
+  }
+  .logo {
+    max-width: 100%;
+  }
+  .body,
+  .html {
+    overflow: hidden;
+  }
+}
