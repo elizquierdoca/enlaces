@@ -11,7 +11,8 @@ html {
   min-height: 100vh;
   font-family: Arial, sans-serif;
   color: #fff;
-}
+  caret-color: transparent;
+} 
 
 /* Fondo con imagen y overlay */
 .background {
